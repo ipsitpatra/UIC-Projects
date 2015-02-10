@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Project 1</string>
+    <string name="hello_world">Hello World</string>
+    <string name="heading">Enter Your Text ((xxx) yyy-zzzz):</string>
+    <string name="textfield">(xxx) yyy-zzzz</string>
+    <string name="button">Search and Dial</string>
+    <string name="quit">Exit</string>
+    <string name="clear">Clear</string>
+
+</resources>
