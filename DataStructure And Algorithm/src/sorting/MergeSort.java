@@ -66,7 +66,6 @@ public class MergeSort {
 	
 	public static void main(String[] args) {
 		
-		
 		int[] a= {2,1,3,4,5,6,7};
 //		int[] a = {2, 6, 3, 5, 1};
 		merge(a);
