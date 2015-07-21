@@ -18,10 +18,10 @@ public class OneDArray {
 				String[] numberStrs = line.split(" ");
 				int[] numbers = new int[numberStrs.length];
 				for(int j = 0;j < numberStrs.length;j++)
-					numbers[i] = Integer.parseInt(numberStrs[i]);
+					numbers[j] = Integer.parseInt(numberStrs[j]);
 
 				if((2 <= n && n <= 100) && (0 <= m && m <= 100))
-					game(n,m,numbers);
+					sb.append(game(n,m,numbers)+"\n");
 				else 
 					break;
 
@@ -32,17 +32,24 @@ public class OneDArray {
 
 	}
 
-	public static String game(int n , int m, int[] numbers){
-		int x = 0;//position holder
-		
+	public static String game(int n , int m, int[] a){
+		int position = 0;
+		int backMove = 0;
 		while(true){
-		if(x!=0)
-			x -= 1;
+			if(position + 1 >= n || position + m >= n)
+				return "YES";
+			else if(a[position + m] == 0 && backMove < m){
+				position += m;
+				backMove = 0;
+			}
+			else if(a[position + 1] == 0 && backMove == 0)
+				position ++;
+			else if(position != 0 && a[position - 1] == 0){
+				position --;
+				backMove ++;
+			}
+			else
+				return "NO";
 		}
-		x += m;
-		x += 1;
-		
-
-		return null;
 	}
 }
