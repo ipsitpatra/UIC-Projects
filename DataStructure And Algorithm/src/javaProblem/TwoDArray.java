@@ -1,4 +1,4 @@
-package others;
+package javaProblem;
 
 import java.util.Scanner;
 
@@ -31,7 +31,6 @@ public class TwoDArray {
 		StringBuilder sb = new StringBuilder();
 		int []a ;
 		int []ans = new int[7];
-		int pos = 0;
 		int pos1 = -100;
 		int pos2 = 0;
 		for (int j = 0; j < 4; j++) {

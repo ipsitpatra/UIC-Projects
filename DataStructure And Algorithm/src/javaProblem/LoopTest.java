@@ -12,7 +12,7 @@ Constraints:
 0≤a,b≤50
 1≤n≤15*/
 
-package others;
+package javaProblem;
 
 import java.io.BufferedReader;
 import java.io.IOException;

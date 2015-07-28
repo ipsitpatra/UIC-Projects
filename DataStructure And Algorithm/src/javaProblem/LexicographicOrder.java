@@ -1,7 +1,7 @@
 /**
  * given a string, find out the lexicographically smallest and largest substring of length k.
  */
-package others;
+package javaProblem;
 
 import java.util.ArrayList;
 import java.util.Collections;

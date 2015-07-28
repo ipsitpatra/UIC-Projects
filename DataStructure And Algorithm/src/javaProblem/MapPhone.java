@@ -1,7 +1,7 @@
 /**
  * 
  */
-package others;
+package javaProblem;
 
 import java.util.HashMap;
 import java.util.Map;
