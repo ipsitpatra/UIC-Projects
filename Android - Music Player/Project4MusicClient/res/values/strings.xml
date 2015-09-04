@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Project 4 Music Player</string>
+    <string name="hello_world">Hello Ipsit!</string>
+    <string name="action_settings">Settings</string>
+    <string name="play">Play</string>
+    <string name="stop">Stop</string>
+    <string name="pause">Pause</string>
+    <string name="song_1">Select Song 1</string>
+    <string name="song_2">Select Song 2</string>
+    <string name="song_3">Select Song 3</string>
+    <string name="song_4">Select Song 4</string>
+    <string name="song_5">Select Song 5</string>
+    <string name="logTransactions">View Log</string>
+    <string name="empty">Empty</string>
+
+</resources>
