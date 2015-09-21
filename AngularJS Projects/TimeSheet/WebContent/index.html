@@ -1,0 +1,83 @@
+<!doctype html>
+<html ng-app="cal.etherios.demo">
+    <head>
+        <link rel="shortcut icon" href="">
+        <script src="js/angularjs/angular.js"></script>
+        <script src="js/angularjs/angular-animate.js"></script>
+        <script src="js/bootstrap/ui-bootstrap-tpls-0.13.4.js"></script>
+        <script src="js/common/index-controller.js"></script>
+        <script src="js/angularjs/angular-route.js" type="text/javascript"></script>
+        <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
+        <title>Etherios :Time Entry Page</title>
+    </head>
+    <body>
+
+        <div ng-controller="PickSundayCtrl">
+            <pre><em>Etherios : Time Entry Page</em></pre>
+            
+            <div style="display:inline-block; min-height:290px;">
+                <p><datepicker ng-model="dt" min-date="minDate" show-weeks="true" class="well well-sm" date-disabled="disabled(date, mode)" style ="margin-left: 20px"></datepicker></p>
+           
+            </div>
+           <p>&nbsp;&nbsp;&nbsp;&nbsp;Select a Sunday from the Calendar above(Other days are blocked using js). Click on Time Sheet to generate the sheet. </p>
+            <hr/>
+            <p> &nbsp;&nbsp;&nbsp;&nbsp;  <button type="button" class="btn btn-sm btn-danger" ng-click="clear()">Clear</button> <button type="button" class="btn btn-sm btn-primary" ng-model="mustShow" ng-click="genday()">{{dt| date:'MMM dd yyyy' }} Time Sheet </button></p>
+            <br/>
+            <br/>
+            <div class="panel panel-default" ng-show="mustShow">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><b>Time Steet</b></h3>
+                </div>
+                <div class="panel-body">
+                    <form id="login" ng-submit="submit()" role="form">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr >
+                                    <th ng-repeat="weekday in weekdays">{{weekday.name}}</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr >
+                                    <td><div class="input-group">
+<!--                                            <input ng-model="fields.date"  type="hidden" class="form-control" value="{{dt.getDate()}}">-->
+                                            <input ng-model="fields.mon__c" type="number" class="form-control" placeholder="{{mon| date:'MMM dd yyyy'}}" min="0" max="9">
+                                            <span class="input-group-addon" >hours</span>
+                                        </div></td>
+                                    <td><div class="input-group">
+                                            <input ng-model="fields.tue__c" type="number" class="form-control" placeholder="{{tue| date:'MMM dd yyyy'}}" min="0" max="9">
+                                            <span class="input-group-addon" >hours</span>
+                                        </div></td>
+                                    <td><div class="input-group">
+                                            <input ng-model="fields.wed__c" type="number" class="form-control" placeholder="{{wed| date:'MMM dd yyyy'}}" min="0" max="9">
+                                            <span class="input-group-addon" >hours</span>
+                                        </div></td>
+                                    <td><div class="input-group">
+                                            <input ng-model="fields.thu__c" type="number" class="form-control" placeholder="{{thu| date:'MMM dd yyyy'}}" min="0" max="9">
+                                            <span class="input-group-addon" >hours</span>
+                                        </div></td>
+                                    <td><div class="input-group">
+                                            <input ng-model="fields.fri__c" type="number" class="form-control" placeholder="{{fri| date:'MMM dd yyyy'}}" min="0" max="9">
+                                            <span class="input-group-addon" >hours</span>
+                                        </div></td>
+                                    <td><div class="input-group">
+                                            <input ng-model="fields.sat__c" type="number" class="form-control" placeholder="{{sat| date:'MMM dd yyyy'}}" min="0" max="9">
+                                            <span class="input-group-addon" >hours</span>
+                                        </div></td>
+                                    <td><div class="input-group">
+                                            <input ng-model="fields.sun__c" type="number" class="form-control" placeholder="{{dt| date:'MMM dd yyyy'}}" min="0" max="9">
+                                            <span class="input-group-addon" >hours</span>
+                                        </div></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <button type="submit" class="btn btn-sm btn-primary" ng-model="msg"  style="float: right;">Submit</button>
+                        <br/>
+                        <br/>
+                        <div ng-show="msg" class="alert alert-info" role="alert" >{{errorMsg}}</div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <hr/>  
+    </body>
+</html>
